@@ -19,10 +19,7 @@ return packer.startup(function(use)
     -- optional for icon support
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  use {
-    'ggandor/leap.nvim',
-    config = require('leap').add_default_mappings()
-  }
+  use 'ggandor/leap.nvim'
   use 'marko-cerovac/material.nvim'
   use {
     'nvim-lualine/lualine.nvim',
