@@ -37,6 +37,7 @@ return packer.startup(function(use)
   })
   use 'numToStr/Comment.nvim'
   use 'tamton-aquib/duck.nvim'
+  use 'lewis6991/gitsigns.nvim'
 
   -- Auto-sync after cloning packer.nvim.
   if packer_bootstrap then
