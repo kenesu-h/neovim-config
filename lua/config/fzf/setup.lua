@@ -9,7 +9,7 @@ fzf_lua.setup({
       ['alt-s'] = actions.file_split,
       ['alt-v'] = actions.file_vsplit,
       ['alt-t'] = actions.file_tabedit,
-      ['alt-c'] = function()
+      ['alt-m'] = function()
         vim.fn.system("touch " .. utils.get_last_query())
         actions.resume()
       end,
@@ -20,7 +20,7 @@ fzf_lua.setup({
           actions.resume()
         end
       end,
-      ['ctrl-alt-c'] = function()
+      ['ctrl-alt-m'] = function()
         vim.fn.mkdir(utils.get_last_query())
         actions.resume()
       end,
@@ -28,7 +28,18 @@ fzf_lua.setup({
         vim.fn.system("rmdir " .. utils.get_last_query())
         actions.resume()
       end,
-    },
+    }, 
   },
+  git = {
+    status = {
+      actions = {
+        ["alt-g"] = function()
+          print(utils.get_last_query())
+          vim.fn.system("git " .. utils.get_last_query())
+          actions.resume()
+        end
+      }
+    }
+  }
 })
 
