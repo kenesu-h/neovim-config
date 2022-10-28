@@ -38,6 +38,10 @@ return packer.startup(function(use)
   use 'numToStr/Comment.nvim'
   use 'tamton-aquib/duck.nvim'
   use 'lewis6991/gitsigns.nvim'
+  use { 
+    'nvim-treesitter/nvim-treesitter',
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+  }
 
   -- Auto-sync after cloning packer.nvim.
   if packer_bootstrap then
