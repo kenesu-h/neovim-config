@@ -7,7 +7,7 @@ mason_lspconfig.setup({
   ensure_installed = {
     "sumneko_lua",
   },
-  automatic_installation = true,
+  automatic_installation = false,
 })
 
 
