@@ -8,7 +8,7 @@ fzf_lua.setup({
       ['default'] = actions.file_edit_or_qf,
       ['alt-s'] = actions.file_split,
       ['alt-v'] = actions.file_vsplit,
-      ['alt-t'] = actions.resume,
+      ['alt-t'] = actions.file_tabedit,
       ['alt-c'] = function()
         vim.fn.system("touch " .. utils.get_last_query())
         actions.resume()
