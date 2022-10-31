@@ -1,6 +1,12 @@
 require("nvim-treesitter.configs").setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "lua", "typescript", "tsx" },
+  ensure_installed = {
+    "javascript",
+    "lua",
+    "python",
+    "typescript",
+    "tsx"
+  },
 
   highlight = {
     enable = true,

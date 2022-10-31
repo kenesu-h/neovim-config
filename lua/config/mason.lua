@@ -6,6 +6,7 @@ mason.setup()
 mason_lspconfig.setup({
   ensure_installed = {
     "sumneko_lua",
+    "pyright",
   },
   automatic_installation = false,
 })
@@ -43,6 +44,11 @@ lspconfig["sumneko_lua"].setup({
 })
 
 lspconfig["tsserver"].setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+
+lspconfig["pyright"].setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
