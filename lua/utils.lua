@@ -14,7 +14,6 @@ end
 --- Source all plugin configs in the path defined by the config path.
 function M.load_plugin_configs()
   M.load_directory(PLUGIN_CONFIG_PATH)
-  M.load_directory(PLUGIN_CONFIG_PATH .. "/duck")
   M.load_directory(PLUGIN_CONFIG_PATH .. "/fterm")
   M.load_directory(PLUGIN_CONFIG_PATH .. "/fzf")
 end

@@ -3,6 +3,7 @@ local fzf_lua = require "fzf-lua"
 local actions = require "fzf-lua.actions"
 
 fzf_lua.setup({
+  winopts = { height=1, width=1 },
   actions = {
     files = {
       ['default'] = actions.file_edit_or_qf,
