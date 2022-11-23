@@ -29,18 +29,7 @@ fzf_lua.setup({
         vim.fn.system("rmdir " .. utils.get_last_query())
         actions.resume()
       end,
-    }, 
+    },
   },
-  git = {
-    status = {
-      actions = {
-        ["alt-g"] = function()
-          print(utils.get_last_query())
-          vim.fn.system("git " .. utils.get_last_query())
-          actions.resume()
-        end
-      }
-    }
-  }
 })
 
